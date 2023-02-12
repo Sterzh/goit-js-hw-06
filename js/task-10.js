@@ -8,7 +8,7 @@ const destroyEl = document.querySelector("button[data-destroy]");
 const boxesEl = document.querySelector("#boxes");
 
 createEl.addEventListener("click", createBoxes);
-createEl.addEventListener("click", destroyBoxes);
+destroyEl.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
   amount = inputEl.value;
@@ -27,5 +27,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes(amount) {
+  boxesEl.innerHTML = "";
+  inputEl.value = "";
   console.log("destroyBoxes");
 }
